@@ -16,7 +16,7 @@ elif not re.match("^[0-9]*$", line):
 
 def main(line):
 
-	# Build a repository to hold all palendromic substrings discovered.
+	# Build a repository to hold all palindromic substrings discovered.
 	result = []
 
 	# Select "chunk" as every possible substring in line str.
@@ -25,12 +25,12 @@ def main(line):
 			chunk = line[starting_char:ending_char + 1] 
 
 
-            # Check if every possible substring is a palendrome,
+            # Check if every possible substring is a palindrome,
             # by checking the reverse of each substring against itself.
 			if chunk == chunk[::-1]: 
 				result.append(chunk)
 
-	# Returns longest palendrome using length as the search key.
+	# Returns longest palindrome using length as the search key.
 	return max(result, key = len)
 
 # output string to command line using stdout
